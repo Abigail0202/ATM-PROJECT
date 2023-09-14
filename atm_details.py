@@ -36,11 +36,6 @@ def check_balance():
         account_balance = mycursor.fetchone()
         for i in account_balance:
             print(i)
-        if  account_balance:
-            print("Balance History:")
-            print(account_balance[0])
-        else:
-            print("No transaction history found for this account.")
         var=input("Do You Want To Continue Press Yes: ")
         if var=="yes":
          atm_access.access_function()
@@ -118,11 +113,6 @@ def view_transaction_history():
         transaction_history = mycursor.fetchone()
         for i in transaction_history:
             print(i)
-        if  transaction_history:
-            print("Transaction History:")
-            print(transaction_history[0])
-        else:
-            print("No transaction history found for this account.")
         var=input("Do You Want To Continue Press Yes: ")
         if var=="yes":
          atm_access.access_function()
